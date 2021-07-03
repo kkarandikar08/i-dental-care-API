@@ -11,10 +11,28 @@ const connectDatabase = async () => {
         return connection.isConnected();
 };
 
-const insertData = async (data: any) => {
-    const patients = database.collection('Patient');
-    const insertedData = await patients.insertOne(data);
+const insertData = async (data: any, collection: string) => {
+    const collectionName = database.collection(collection);
+    const insertedData = await collectionName.insertOne(data);
     return insertedData.result;
 }
 
-export  { connectDatabase, insertData };
+const readData = async (collection: string, query?: any, data?: any, findMultiple: boolean = true) => {
+    const collectionName = database.collection(collection);
+    if (!findMultiple) {
+        try {
+            console.log('Find One query');
+            return await collectionName.findOne(query);
+        } catch (e) {
+            return e;
+        }
+    } else {
+        try {
+            return collectionName.find(query);
+        } catch (e) {
+            return e;
+        }
+    }
+}
+
+export  { connectDatabase, insertData, readData };
