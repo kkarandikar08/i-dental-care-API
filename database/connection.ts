@@ -21,7 +21,6 @@ const readData = async (collection: string, query?: any, data?: any, findMultipl
     const collectionName = database.collection(collection);
     if (!findMultiple) {
         try {
-            console.log('Find One query');
             return await collectionName.findOne(query);
         } catch (e) {
             return e;

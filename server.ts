@@ -40,16 +40,21 @@ app.get('/patients', ( async (req, res) => {
 
 app.post('/create-case-paper', ( async (req, res) => {
     const newPatient: Patient = req.body;
+    console.log('logging new patient body', req.body);
     const connection = await connectDatabase();
     if(connection) {
         try {
         const findPatient = await readData('Patient',{firstName: newPatient.firstName, lastName: newPatient.lastName, phone: newPatient.phone}, newPatient, false );
-        console.log(newPatient);
+        console.log('looging if new patient already exists', newPatient);
         if (findPatient !== null) {
             res.json('The Patient you are trying to add already exists in the system ');
         } else {
-            const insertingData = await insertData(newPatient, 'Patient');
+            try {
+            await insertData(newPatient, 'Patient');
             res.json(200);
+            } catch (e) {
+                res.status(400).json(e);
+            }
         }
         } catch (e) {
             res.json(e).status(400);
