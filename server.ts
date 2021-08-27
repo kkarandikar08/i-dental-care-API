@@ -3,7 +3,6 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import {connectDatabase, insertData, readData} from './database/connection';
 import {Patient} from "./interfaces/Patient";
-import get = Reflect.get;
 import {Cursor} from "mongodb";
 
 
@@ -61,6 +60,14 @@ app.post('/create-case-paper', ( async (req, res) => {
         }
     }
 }));
+
+//register
+//login
+//patients
+//patient
+//create-case-paper
+//appointments(GET, POST, PUT)
+
 
 app.listen(5000, () => {
     console.log('Running on Port 5000');
