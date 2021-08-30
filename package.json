@@ -4,24 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf dist && tsc",
     "dev": "nodemon --config nodemon.json src/server.ts",
-    "start": "tsc && cd dist && node server",
+    "start": "npm run build && cd dist && node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/body-parser": "^1.19.0",
-    "@types/cors": "^2.8.10",
-    "@types/express": "^4.17.12",
-    "@types/mongodb": "^3.6.19",
-    "@types/mongoose": "^5.11.97",
-    "@types/mysql": "^2.15.18",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongodb": "^3.6.9",
-    "mongoose": "^5.13.0",
-    "mysql": "^2.18.1"
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/cors": "^2.8.10",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.12",
+    "@types/mysql": "^2.15.19",
+    "nodemon": "^2.0.12"
   }
 }
