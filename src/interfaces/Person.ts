@@ -1,3 +1,5 @@
+import {Gender} from "../enums/gender";
+
 export interface Person {
     id: string;
     firstName: string;
@@ -8,9 +10,6 @@ export interface Person {
     city: string;
     state: string;
     zipCode: string;
-    documents: string;
-    gender: string;
-    dateOfBirth: string;
-    medicalHistory: string
-    medicationList: string;
+    gender: Gender;
+    dateOfBirth: Date;
 }

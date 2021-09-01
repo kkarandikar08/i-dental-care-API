@@ -3,7 +3,7 @@ import registerPatients from "../../services/patients/register-patients";
 
 const patientRoutes = Router();
 
-patientRoutes.post('/register', registerPatients);
+patientRoutes.post('/patient/register', registerPatients);
 //get all patients
 //update a patient
 //get a patient

@@ -5,17 +5,12 @@ import {databaseConfigurations} from "../config/connection";
 const dbConfig = databaseConfigurations;
 
 const insertData = async (data: any, query: string) => {
-
+    console.log('called', query, data);
     const connection = await mysql.createConnection(dbConfig);
     try {
-        const result = await connection.query(query, data);
-        console.log(result);
-        return result;
+        return await connection.execute(query, data);
     // @ts-ignore
     } catch (e: any) {
-        if (e.code === 'ER_DUP_ENTRY') {
-            return 'The patient already exists in the Database!'
-        }
         return e;
     } finally {
         await connection.end(() => {
@@ -26,10 +21,13 @@ const insertData = async (data: any, query: string) => {
 }
 
 const readData = async (query: string) => {
+
     const connection = await mysql.createConnection(dbConfig);
-    // try {
-    //     const result = await connection.query
-    // }
+    try {
+        return await connection.query('SELECT * FROM Identistry.Person');
+    } catch (e) {
+        return e;
+    }
 
 }
 

@@ -2,26 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6659dd5e-e596-49e7-9133-e37c7bbcb15d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.model" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/build.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/connection.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/database-controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/sql/queries/create-person.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/patients/patient-routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/patients/register-patients.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/14eb0d5b-e400-429e-8f29-a104e33408fa.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/queries/create-appointment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/queries/create-dentist.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/gender.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/specialization.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/treatment-status.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/Appointment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/Dentist.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/Patient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/Service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/appointments/appointment-routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/dentists/dentist-routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/appointments/create-appointment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/dentists/register-dentists.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/connection.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/Patient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Person.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/database-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/sql/queries/create-person.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/queries/create-patient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/Person.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Person.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/patients/patient-routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/patients/patient-routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/patients/register-patients.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/patients/register-patients.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +32,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="tsconfig.json" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -61,11 +63,11 @@
       <recent name="$PROJECT_DIR$/src/services" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/database" />
       <recent name="$PROJECT_DIR$/src/config" />
       <recent name="$PROJECT_DIR$/src/services/patients" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/database" />
     </key>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
@@ -85,7 +87,7 @@
       <workItem from="1625174626398" duration="4000" />
       <workItem from="1625175165193" duration="12307000" />
       <workItem from="1630101429147" duration="14098000" />
-      <workItem from="1630337566411" duration="5355000" />
+      <workItem from="1630337566411" duration="15601000" />
     </task>
     <servers />
   </component>
@@ -93,10 +95,12 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1662" y="325" key="#SQL_Dialects" timestamp="1630343595308">
-      <screen x="-1920" y="-20" width="1920" height="1055" />
+    <state x="194" y="294" key="#SQL_Dialects" timestamp="1630451276371">
+      <screen x="0" y="25" width="1440" height="823" />
     </state>
     <state x="-1662" y="325" key="#SQL_Dialects/0.25.1440.821/-1920.-20.1920.1055@-1920.-20.1920.1055" timestamp="1630343595308" />
+    <state x="-1662" y="370" key="#SQL_Dialects/0.25.1440.822/-1920.25.1920.1055/1440.-10.1920.1055@-1920.25.1920.1055" timestamp="1630436063133" />
+    <state x="194" y="294" key="#SQL_Dialects/0.25.1440.823/-1920.-20.1920.1055@0.25.1440.823" timestamp="1630451276371" />
     <state x="226" y="341" key="#SQL_Dialects/0.25.1680.966/-1920.25.1920.1055@0.25.1680.966" timestamp="1625020518710" />
     <state x="440" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625017345434">
       <screen x="0" y="25" width="1680" height="966" />

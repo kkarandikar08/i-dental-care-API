@@ -1,14 +1,31 @@
-import createPersonQuery from "../../database/sql/queries/create-person";
-import {insertData} from "../../database/database-controller";
+import createPatientQuery from "../../database/queries/create-patient";
+import {insertData, readData} from "../../database/database-controller";
+import {Patient} from "../../interfaces/Patient";
 
 const registerPatients = (async (req: any, res: any) => {
-    const data = req.body;
+    const patient: Patient = req.body;
+    const data = [
+        patient.person.id,
+        patient.person.firstName,
+        patient.person.lastName,
+        patient.person.phoneNumber,
+        patient.person.street1,
+        patient.person.street2,
+        patient.person.city,
+        patient.person.state,
+        patient.person.zipCode,
+        patient.person.gender,
+        new Date(patient.person.dateOfBirth),
+        patient.id,
+        patient.medicalHistory,
+        patient.medicationList,
+        JSON.stringify(patient.documents),
+        patient.clinicId,
+        patient.dentistId
+    ]
     try {
-        const response = await insertData([
-            data.id, data.firstName, data.lastName, data.phoneNumber, data.street1, data.street2,
-            data.city, data.state, data.zipCode, JSON.stringify(data.documents), data.gender,
-            new Date(data.dateOfBirth), data.medicalHistory, data.medicationList
-        ], createPersonQuery);
+        const response = await insertData(data, createPatientQuery);
+
         res.json(response);
     } catch (e) {
         res.json(e);
@@ -17,3 +34,5 @@ const registerPatients = (async (req: any, res: any) => {
 })
 
 export default registerPatients;
+
+

@@ -1,0 +1,4 @@
+const createDentistQuery = `CALL RegisterDentist(?, ?, ?, ? , ?, ?, ?, ? , ?, ?, ?, ?, ? , ?)`;
+
+
+export default createDentistQuery;
