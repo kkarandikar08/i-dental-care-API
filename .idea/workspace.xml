@@ -2,27 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6659dd5e-e596-49e7-9133-e37c7bbcb15d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/database/queries/create-appointment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/queries/create-dentist.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/gender.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/services.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/specialization.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/treatment-status.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Appointment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Dentist.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Patient.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/appointments/appointment-routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/dentists/dentist-routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/appointments/create-appointment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/dentists/register-dentists.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/queries/create-staff.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/staff-description.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/staff.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/staff/staff-routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/staff/register-staff.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/database-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/sql/queries/create-person.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/queries/create-patient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Person.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Person.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/patients/patient-routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/patients/patient-routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/patients/register-patients.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/patients/register-patients.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/appointments/create-appointment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/appointments/create-appointment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +76,8 @@
       <workItem from="1625174626398" duration="4000" />
       <workItem from="1625175165193" duration="12307000" />
       <workItem from="1630101429147" duration="14098000" />
-      <workItem from="1630337566411" duration="15601000" />
+      <workItem from="1630337566411" duration="18743000" />
+      <workItem from="1630715284549" duration="1260000" />
     </task>
     <servers />
   </component>
@@ -95,12 +85,12 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="194" y="294" key="#SQL_Dialects" timestamp="1630451276371">
+    <state x="194" y="294" key="#SQL_Dialects" timestamp="1630516459278">
       <screen x="0" y="25" width="1440" height="823" />
     </state>
     <state x="-1662" y="325" key="#SQL_Dialects/0.25.1440.821/-1920.-20.1920.1055@-1920.-20.1920.1055" timestamp="1630343595308" />
     <state x="-1662" y="370" key="#SQL_Dialects/0.25.1440.822/-1920.25.1920.1055/1440.-10.1920.1055@-1920.25.1920.1055" timestamp="1630436063133" />
-    <state x="194" y="294" key="#SQL_Dialects/0.25.1440.823/-1920.-20.1920.1055@0.25.1440.823" timestamp="1630451276371" />
+    <state x="194" y="294" key="#SQL_Dialects/0.25.1440.823/-1920.-20.1920.1055@0.25.1440.823" timestamp="1630516459278" />
     <state x="226" y="341" key="#SQL_Dialects/0.25.1680.966/-1920.25.1920.1055@0.25.1680.966" timestamp="1625020518710" />
     <state x="440" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625017345434">
       <screen x="0" y="25" width="1680" height="966" />
@@ -142,9 +132,10 @@
       <screen x="-1920" y="-20" width="1920" height="1055" />
     </state>
     <state x="-1451" y="143" key="SettingsEditor/0.25.1440.819/-1920.-20.1920.1055@-1920.-20.1920.1055" timestamp="1630101447310" />
-    <state x="541" y="263" width="597" height="490" key="find.popup" timestamp="1625159159381">
-      <screen x="0" y="25" width="1680" height="966" />
+    <state x="464" y="227" width="567" height="522" key="find.popup" timestamp="1630715456275">
+      <screen x="0" y="25" width="1440" height="819" />
     </state>
+    <state x="464" y="227" width="567" height="522" key="find.popup/0.25.1440.819/-1920.-20.1920.1055@0.25.1440.819" timestamp="1630715456275" />
     <state x="541" y="263" width="597" height="490" key="find.popup/0.25.1680.966/-1920.25.1920.1055@0.25.1680.966" timestamp="1625159159381" />
     <state x="505" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1625022299950">
       <screen x="0" y="25" width="1680" height="966" />

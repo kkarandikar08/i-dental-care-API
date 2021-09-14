@@ -1,0 +1,3 @@
+const createStaffQuery = `CALL RegisterStaff(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`;
+
+export default createStaffQuery;

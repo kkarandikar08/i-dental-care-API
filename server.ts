@@ -2,7 +2,9 @@ import express, {Router} from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import routes from "./src/routes";
+import * as env from 'dotenv';
 
+env.config();
 
 const app = express();
 app.use(cors());
@@ -18,6 +20,6 @@ app.use(routes);
 //appointments(GET, POST, PUT)
 
 
-app.listen(3001, () => {
-    console.log('Running on Port 5000');
+app.listen(process.env.SERVER_PORT, () => {
+    console.log(`Running on Port ${process.env.SERVER_PORT}`);
 });

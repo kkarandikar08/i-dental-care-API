@@ -23,7 +23,6 @@ const createAppointment = (async (req: any, res: any) => {
     } catch (e) {
         res.json(e);
     }
-
 })
 
 export default createAppointment;
