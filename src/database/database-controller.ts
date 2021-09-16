@@ -20,11 +20,11 @@ const insertData = async (data: any, query: string) => {
 
 }
 
-const readData = async (query: string) => {
+const readData = async (query: string, data?: any) => {
 
     const connection = await mysql.createConnection(dbConfig);
     try {
-        return await connection.query('SELECT * FROM Identistry.Person');
+        return await connection.execute(query, data);
     } catch (e) {
         return e;
     }

@@ -1,4 +1,4 @@
-import {Staff} from "../../interfaces/staff";
+import {Staff} from "../../interfaces/Staff";
 import {insertData} from "../../database/database-controller";
 import createStaffQuery from "../../database/queries/create-staff";
 

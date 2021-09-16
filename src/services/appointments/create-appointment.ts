@@ -18,7 +18,6 @@ const createAppointment = (async (req: any, res: any) => {
     ]
     try {
         const response = await insertData(data, createAppointmentQuery);
-
         res.json(response);
     } catch (e) {
         res.json(e);

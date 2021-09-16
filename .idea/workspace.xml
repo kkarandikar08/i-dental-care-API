@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6659dd5e-e596-49e7-9133-e37c7bbcb15d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/database/queries/create-staff.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/staff-description.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/staff.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/staff/staff-routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/staff/register-staff.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/queries/login.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/Auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/auth/auth-routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/auth/login.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/database-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/staff.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Staff.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/appointments/create-appointment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/appointments/create-appointment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/staff/register-staff.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/staff/register-staff.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,7 @@
       <workItem from="1625175165193" duration="12307000" />
       <workItem from="1630101429147" duration="14098000" />
       <workItem from="1630337566411" duration="18743000" />
-      <workItem from="1630715284549" duration="1260000" />
+      <workItem from="1630715284549" duration="9336000" />
     </task>
     <servers />
   </component>
@@ -132,14 +132,16 @@
       <screen x="-1920" y="-20" width="1920" height="1055" />
     </state>
     <state x="-1451" y="143" key="SettingsEditor/0.25.1440.819/-1920.-20.1920.1055@-1920.-20.1920.1055" timestamp="1630101447310" />
-    <state x="464" y="227" width="567" height="522" key="find.popup" timestamp="1630715456275">
-      <screen x="0" y="25" width="1440" height="819" />
+    <state x="464" y="227" width="567" height="524" key="find.popup" timestamp="1631666753581">
+      <screen x="0" y="25" width="1440" height="821" />
     </state>
     <state x="464" y="227" width="567" height="522" key="find.popup/0.25.1440.819/-1920.-20.1920.1055@0.25.1440.819" timestamp="1630715456275" />
+    <state x="464" y="227" width="567" height="524" key="find.popup/0.25.1440.821/-1920.-20.1920.1055@0.25.1440.821" timestamp="1631666753581" />
     <state x="541" y="263" width="597" height="490" key="find.popup/0.25.1680.966/-1920.25.1920.1055@0.25.1680.966" timestamp="1625159159381" />
-    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1625022299950">
-      <screen x="0" y="25" width="1680" height="966" />
+    <state x="433" y="205" width="670" height="575" key="search.everywhere.popup" timestamp="1631666757347">
+      <screen x="0" y="25" width="1440" height="821" />
     </state>
+    <state x="433" y="205" width="670" height="575" key="search.everywhere.popup/0.25.1440.821/-1920.-20.1920.1055@0.25.1440.821" timestamp="1631666757347" />
     <state x="505" y="237" width="670" height="676" key="search.everywhere.popup/0.25.1680.966/-1920.25.1920.1055@0.25.1680.966" timestamp="1625022299950" />
   </component>
 </project>
